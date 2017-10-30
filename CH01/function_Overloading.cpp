@@ -9,8 +9,9 @@ void MyFunc(char ch){
 	cout << "MyFunc(char " << ch << ") invoked!" << endl;
 }
 
-void MyFunc(int num){
+int MyFunc(int num){
 	cout << "MyFunc(int " << num << ") invoked!" << endl;
+	return num + 100;
 }
 
 void MyFunc(double x, int y){
