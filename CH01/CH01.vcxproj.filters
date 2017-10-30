@@ -78,6 +78,9 @@
     <ClCompile Include="Struct_New.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Str_Reverse.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NameSP.h">

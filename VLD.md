@@ -15,4 +15,5 @@
 ![No Memory Leak](./img/memory-leak1.PNG)
 
 - 다음은 메모리 누수가 생긴 코드의 결과이다.
+- struct_new.cpp 21번째 줄과 45번째 줄에서 메모리 누수를 감지했다는 결과가 나왔다.
 ![Memory Leak](./img/memory-leak2.PNG)
