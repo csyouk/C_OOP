@@ -93,6 +93,9 @@
     <ClCompile Include="Extra_Experiment.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="scanf1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NameSP.h">
