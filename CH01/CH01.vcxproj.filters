@@ -69,6 +69,15 @@
     <ClCompile Include="test3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="New_Delete.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="int_Arr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Struct_New.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NameSP.h">

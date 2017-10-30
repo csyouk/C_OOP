@@ -9,7 +9,5 @@ int main(void){
 	cout << BoxVolume(3, 4, 5) << endl;
 	cout << BoxVolume(3, 4) << endl;
 	cout << BoxVolume(3) << endl;
-
-
 	return 0;
 }
