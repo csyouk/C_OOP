@@ -11,7 +11,12 @@ int main(void){
 
 	cout << "월급 : ";
 	cin >> salary;
+	if (cin.fail())
+		throw "Please input number";
 
+
+	cin.clear();
+	cin.ignore(100, '\n');
 	cout << "회사주소 : ";
 	cin.getline(comAddr, 50);
 
