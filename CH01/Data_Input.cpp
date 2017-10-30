@@ -3,19 +3,22 @@ using namespace std;
 
 int main(void){
 
-	char name[20], comAddr[50];
-	int salary;
+	int x = 3;
+	int &y = x;
 
-	cout << "이름 : "; 
-	cin.getline(name, 20);
+	//char name[20], comAddr[50];
+	//int salary;
 
-	cout << "월급 : ";
-	cin >> salary;
+	//cout << "이름 : "; 
+	//cin.getline(name, 20);
 
-	cout << "회사주소 : ";
-	cin.getline(comAddr, 50);
+	//cout << "월급 : ";
+	//cin >> salary;
 
-	cout << name << "," << salary << ", " << comAddr << endl;
+	//cout << "회사주소 : ";
+	//cin.getline(comAddr, 50);
+
+	//cout << name << "," << salary << ", " << comAddr << endl;
 
 	return 0;
 }
