@@ -19,6 +19,9 @@
     <Filter Include="생성자소멸자">
       <UniqueIdentifier>{a568f812-9ee3-41bf-8af5-d62c4c9769aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="복사생성자">
+      <UniqueIdentifier>{aa06af9b-04d3-4e74-9df9-97beffdc3891}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OOP1.cpp">
@@ -68,6 +71,21 @@
     </ClCompile>
     <ClCompile Include="NameCard.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Init_Style.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_Con1.cpp">
+      <Filter>복사생성자</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_Con2.cpp">
+      <Filter>복사생성자</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_Con3.cpp">
+      <Filter>복사생성자</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_Constructor.cpp">
+      <Filter>복사생성자</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
