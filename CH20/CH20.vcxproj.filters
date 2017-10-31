@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="파일분할">
+      <UniqueIdentifier>{9dea965a-a52b-450d-8ef6-203ef1beb9fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OOP1.cpp">
@@ -27,16 +30,22 @@
     <ClCompile Include="AccessControl.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Door_Main.cpp">
+      <Filter>파일분할</Filter>
+    </ClCompile>
     <ClCompile Include="Door_Methodcpp.cpp">
+      <Filter>파일분할</Filter>
+    </ClCompile>
+    <ClCompile Include="Info_Hiding.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Door_Main.cpp">
+    <ClCompile Include="Info_Encapsulation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Door.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>파일분할</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

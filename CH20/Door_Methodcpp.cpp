@@ -2,10 +2,7 @@
 #include "Door.h"
 using namespace std;
 
-void Door::Open()
-{
-	state = OPEN;
-}
+
 void Door::Close()
 {
 	state = CLOSE;

@@ -25,13 +25,24 @@ const int CLOSE = 2;
 //};
 
 // After refactor
+//class Door
+//{
+//private:
+//	int state;
+//
+//public:
+//	void Open();
+//	void Close();
+//	void CurrentState();
+//};
+
 class Door
 {
 private:
 	int state;
 
 public:
-	void Open();
+  inline void Open();
 	void Close();
 	void CurrentState();
 };
