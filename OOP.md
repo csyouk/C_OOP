@@ -36,14 +36,14 @@ Point p5(300); // default argument가 지정되어 있을때에만 가능한 생
 - 사용자 정의 복사  생성자가 없을 때 자동 삽입
 - 멤버 변수 대 멤버 변수의 복사를 수행한다.
 - **Default 복사 생성자**의 복사 형태는 Shallow Copy이다.
-[Shallow Copy](./img/ShallowCopy.jpg)
+![Shallow Copy](./img/ShallowCopy.jpg)
 
 
 - **Default 복사 생성자**는 다음과 같은 문제점이 있다.
   - 멤버중 동적할당을 받는 멤버가 있는 경우, 멤버 대 멤버로 복사하므로,  복사 받은 개체가 먼저 소멸시 할당된 Heap영역을 해제한다.
   - 이후 원본 개체가 소멸시 해제된 영역을 또 해제 하므로 문제가 발생한다.
   - 이러한 문제를 해결하기 위해서 Deep copy를 수행해야 한다.
-[Deep Copy](./img/DeepCopy.jpg)
+![Deep Copy](./img/DeepCopy.jpg)
 
 ## Destructor(소멸자)
 - delete, delete[] 명령어를 통해서 객체를 소멸시킬때 호출되는 메소드이다.
