@@ -37,7 +37,9 @@ Point p5(300); // default argument가 지정되어 있을때에만 가능한 생
 - 멤버 변수 대 멤버 변수의 복사를 수행한다.
 - **Default 복사 생성자**의 복사 형태는 Shallow Copy이다.
 
-![Shallow Copy](./img/ShallowCopy.jpg)
+<p align="center">
+  <img src="./img/ShallowCopy.jpg">
+</p>
 
 
 - **Default 복사 생성자**는 다음과 같은 문제점이 있다.
