@@ -6,8 +6,8 @@ class AAA
 private:
 	int val;
 public:
-	AAA(int _val){
-	//explicit AAA(int _val){
+	//AAA(int _val){
+	explicit AAA(int _val){
 		val = _val;
 	}
 	void ShowData(){
@@ -30,7 +30,7 @@ int main(void){
 	// AAA a2(200);
 	// 하지만, explicit 키워드를 생성자에 적으면, 암시적 변환이 되지 않는다.
 	// explicit 사용시 아래 코드는 에러가 난다.
-	//AAA a2 = 200; 
+	AAA a2 = 200; 
 	//a2.ShowData();
 
 	return 0;

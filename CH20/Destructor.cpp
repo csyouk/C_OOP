@@ -15,5 +15,7 @@ int main(void){
 	AAA a1;
 	AAA a2;
 
+	AAA * a3 = new AAA();
+
 	return 0;
 }
