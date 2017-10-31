@@ -1,4 +1,5 @@
 # Visual Leak Detector 사용법
+- **Memory Leak** 을 감지하는 써드파티 라이브러리.
 - VLD 설치 후.
 - Program Files(x86)에 있는 **Visual Leak Detector** 파일을 찾아간 후,
 **bin, include, lib** 폴더에 있는 내용을 **사용중인 Microsoft Visual Studio**  
