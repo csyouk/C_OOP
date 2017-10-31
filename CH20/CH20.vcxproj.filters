@@ -16,6 +16,9 @@
     <Filter Include="파일분할">
       <UniqueIdentifier>{9dea965a-a52b-450d-8ef6-203ef1beb9fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="생성자소멸자">
+      <UniqueIdentifier>{a568f812-9ee3-41bf-8af5-d62c4c9769aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OOP1.cpp">
@@ -41,6 +44,18 @@
     </ClCompile>
     <ClCompile Include="Info_Encapsulation.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Person1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructor.cpp">
+      <Filter>생성자소멸자</Filter>
+    </ClCompile>
+    <ClCompile Include="Person2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_Constructor.cpp">
+      <Filter>생성자소멸자</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
