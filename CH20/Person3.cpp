@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -43,7 +44,12 @@ void Person::ShowData(){
 Person::~Person(){
 	cout << "Person " << name << " instance destroyed." << endl;
 }
-
+Person::Person(){
+	//cout << "implicit" << endl;
+	strcpy(name, "No Name");
+	strcpy(phone, "No Phone");
+	age = 0;
+}
 Person::Person(char * _name, char * _phone, int _age){
 	SetName(_name);
 	SetPhone(_phone);
@@ -56,9 +62,25 @@ int main(void){
 	Person * p1 = new Person("kim", "010-9570-0404", 20);
 	p1->ShowData();
 
-	delete p1;
 	Person p2("cs", "010-3343-2423", 30);
 	p2.ShowData();
 
+	Person p3;
+	p3.ShowData();
+
+	Person p4 = Person("kai", "010-2323-3030", 38);
+	p4.ShowData();
+
+	Person * p5 = new Person(); // 명시적으로 default 생성자를 호출
+	p5->ShowData();
+
+	Person * p6 = new Person; // 암시적으로 default 생성자를 호출.
+	p6->ShowData();
+
+
+
+	delete p1;
+	delete p5;
+	delete p6;
 	return 0;
 }

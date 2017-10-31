@@ -57,6 +57,18 @@
     <ClCompile Include="Default_Constructor.cpp">
       <Filter>생성자소멸자</Filter>
     </ClCompile>
+    <ClCompile Include="Person3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Destructor.cpp">
+      <Filter>생성자소멸자</Filter>
+    </ClCompile>
+    <ClCompile Include="Person4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NameCard.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Door.h">
