@@ -47,7 +47,9 @@ Point p5(300); // default argument가 지정되어 있을때에만 가능한 생
   - 이후 원본 개체가 소멸시 해제된 영역을 또 해제 하므로 문제가 발생한다.
   - 이러한 문제를 해결하기 위해서 Deep copy를 수행해야 한다.
 
-![Deep Copy](./img/DeepCopy.jpg)
+<p align="center">
+  <img src="./img/DeepCopy.jpg">
+</p>
 
 - 다음은 Deep Copy를 보여주는 코드이다.
 
