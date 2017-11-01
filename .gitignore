@@ -2,9 +2,6 @@
 *.tlog
 *.log
 *.opensdf
-CH20\Debug\*
 *.pdb
 *.idb
-*.pdb
-*.sdf
 *.sdf
