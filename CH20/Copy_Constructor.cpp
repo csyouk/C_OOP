@@ -68,53 +68,6 @@ int main(void){
 	cout << "============\n" << endl;
 	// Method chaining
 	obj1.AddSudang(200000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
-		AddSudang(100000).ShowData().\
 		AddSudang(100000).AddSudang(100000).AddSudang(100000).\
 		AddSudang(100000).AddSudang(100000).AddSudang(100000).\
 		AddSudang(100000).AddSudang(100000).AddSudang(100000).\

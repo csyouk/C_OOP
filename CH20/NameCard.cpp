@@ -1,29 +1,29 @@
-/*
-´ÙÀ½Àº ¸íÇÔÀ» ÀÇ¹ÌÇÏ´Â NameCard Å¬·¡½ºÀÌ´Ù. ÀÌ Å¬·¡½º¿¡´Â ¼º¸í,È¸»çÀÌ¸§,ÀüÈ­¹øÈ£,Á÷±ÞÀÌ ÀúÀåµÈ´Ù.
-Á÷±ÞÀ» Á¦¿ÜÇÑ ³ª¸ÓÁö ¸â¹ö´Â ¹®ÀÚ¿­ ÇüÅÂÀÌ¸ç, ¹®ÀÚ¿­¸â¹ö´Â µ¿ÀûÇÒ´çÀ» ¹Þ±â·Î ÇÑ´Ù.
-Á÷±ÞÀº ³ª¿­ÇüÀ» Á¦°øÇÑ´Ù. enum¼±¾ð¿¡¼­ ³ª¿­µÈ Á¤º¸´Â ¼ø¼­´ë·Î »ç¿ø,ÁÖÀÓ,´ë¸®,°úÀåÀ» ¶æÇÑ´Ù.
+ï»¿/*
+ë‹¤ìŒì€ ëª…í•¨ì„ ì˜ë¯¸í•˜ëŠ” NameCard í´ëž˜ìŠ¤ì´ë‹¤. ì´ í´ëž˜ìŠ¤ì—ëŠ” ì„±ëª…,íšŒì‚¬ì´ë¦„,ì „í™”ë²ˆí˜¸,ì§ê¸‰ì´ ì €ìž¥ëœë‹¤.
+ì§ê¸‰ì„ ì œì™¸í•œ ë‚˜ë¨¸ì§€ ë©¤ë²„ëŠ” ë¬¸ìžì—´ í˜•íƒœì´ë©°, ë¬¸ìžì—´ë©¤ë²„ëŠ” ë™ì í• ë‹¹ì„ ë°›ê¸°ë¡œ í•œë‹¤.
+ì§ê¸‰ì€ ë‚˜ì—´í˜•ì„ ì œê³µí•œë‹¤. enumì„ ì–¸ì—ì„œ ë‚˜ì—´ëœ ì •ë³´ëŠ” ìˆœì„œëŒ€ë¡œ ì‚¬ì›,ì£¼ìž„,ëŒ€ë¦¬,ê³¼ìž¥ì„ ëœ»í•œë‹¤.
 
-main() ÇÔ¼ö¸¦ ÂüµµÇÏ¿© ´ÙÀ½ÀÇ šïÇà°á°ú¸¦ Ãâ·ÂÇÏ¶ó.
+main() í•¨ìˆ˜ë¥¼ ì°¸ë„í•˜ì—¬ ë‹¤ìŒì˜ ì‹·í–‰ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ë¼.
 
-½ÇÇà°á°ú
-ÀÌ¸§: Lee
-È¸»ç: ABCEng
-ÀüÈ­¹øÈ£: 010-1111-2222
-Á÷±Þ: »ç¿ø
+ì‹¤í–‰ê²°ê³¼
+ì´ë¦„: Lee
+íšŒì‚¬: ABCEng
+ì „í™”ë²ˆí˜¸: 010-1111-2222
+ì§ê¸‰: ì‚¬ì›
 
-ÀÌ¸§: Hong
-È¸»ç: OrangeEng
-ÀüÈ­¹øÈ£: 010-3333-4444
-Á÷±Þ: ÁÖÀÓ
+ì´ë¦„: Hong
+íšŒì‚¬: OrangeEng
+ì „í™”ë²ˆí˜¸: 010-3333-4444
+ì§ê¸‰: ì£¼ìž„
 
-ÀÌ¸§: Kim
-È¸»ç: SoGoodCompa
-ÀüÈ­¹øÈ£: 010-5555-6666
-Á÷±Þ: ´ë¸®
+ì´ë¦„: Kim
+íšŒì‚¬: SoGoodCompa
+ì „í™”ë²ˆí˜¸: 010-5555-6666
+ì§ê¸‰: ëŒ€ë¦¬
 
-¼Ò¸êÀÚ È£Ãâ¿¡¼­ µ¿Àû¸Þ¸ð¸® ¸â¹ö ÇØÁ¦ µÊ~~
-¼Ò¸êÀÚ È£Ãâ¿¡¼­ µ¿Àû¸Þ¸ð¸® ¸â¹ö ÇØÁ¦ µÊ~~
-¼Ò¸êÀÚ È£Ãâ¿¡¼­ µ¿Àû¸Þ¸ð¸® ¸â¹ö ÇØÁ¦ µÊ~~
+ì†Œë©¸ìž í˜¸ì¶œì—ì„œ ë™ì ë©”ëª¨ë¦¬ ë©¤ë²„ í•´ì œ ë¨~~
+ì†Œë©¸ìž í˜¸ì¶œì—ì„œ ë™ì ë©”ëª¨ë¦¬ ë©¤ë²„ í•´ì œ ë¨~~
+ì†Œë©¸ìž í˜¸ì¶œì—ì„œ ë™ì ë©”ëª¨ë¦¬ ë©¤ë²„ í•´ì œ ë¨~~
 */
 #include <iostream>
 #include <cstring>
@@ -32,29 +32,11 @@ using namespace std;
 namespace COMP_POS
 {
 	enum { CLERK, SENIOR, ASSIST, MANAGER };
-	char * positions[] = {"»ç¿ø", "ÁÖÀÓ", "´ë¸®", "°úÀå"};
+	char * positions[] = {"ì‚¬ì›", "ì£¼ìž„", "ëŒ€ë¦¬", "ê³¼ìž¥"};
 	char * CShowPositonInfo(int position){
 		return positions[position];
 	}
-	void ShowPositionInfo(int position)
-	{
-		switch (position){
-		case CLERK:
-			cout << "»ç¿ø";
-			break;
-		case SENIOR:
-			cout << "ÁÖÀÓ";
-			break;
-		case ASSIST:
-			cout << "´ë¸®";
-			break;
-		case MANAGER:
-			cout << "°úÀå";
-			break;
-		default:
-			break;
-		}
-	}
+
 }
 
 class NameCard
@@ -65,38 +47,43 @@ private:
 	char * phone;
 	int position;
 public:
-	NameCard(char * _name, char * _company, char * _phone, int _pos)
-	{
-		//Ãß°¡
+	NameCard(char * _name, char * _company, char * _phone, int _pos){
+		//ì¶”ê°€
 		name = new char[strlen(_name) + 1];
-		strcpy(name, _name);
-
 		company = new char[strlen(_company) + 1];
-		strcpy(company, _company);
-
 		phone = new char[strlen(_phone) + 1];
+
+		strcpy(name, _name);
+		strcpy(company, _company);
 		strcpy(phone, _phone);
 
 		position = _pos;
 	}
 
-	void ShowNameCardInfo()
-	{
-		//Ãß°¡
-		cout << "ÀÌ¸§ : " << name << endl;
-		cout << "È¸»ç : " << company << endl;
-		cout << "ÀüÈ­¹øÈ£ : " << phone << endl;
-		//cout << "Á÷±Þ : ";
-		//COMP_POS::ShowPositionInfo(position);
-		//cout << endl;
+	NameCard(NameCard & ref){
+		name = new char[strlen(ref.name) + 1];
+		company = new char[strlen(ref.company) + 1];
+		phone = new char[strlen(ref.phone) + 1];
 
-		cout << "Á÷±Þ : " << COMP_POS::CShowPositonInfo(position) << endl;
+		strcpy(name, ref.name);
+		strcpy(company, ref.company);
+		strcpy(phone, ref.phone);
+
+		position = ref.position;
+	}
+
+	void ShowNameCardInfo(){
+		//ì¶”ê°€
+		cout << "ì´ë¦„ : " << name << endl;
+		cout << "íšŒì‚¬ : " << company << endl;
+		cout << "ì „í™”ë²ˆí˜¸ : " << phone << endl;
+		cout << "ì§ê¸‰ : " << COMP_POS::CShowPositonInfo(position) << endl;
 	}
 
 	~NameCard()
 	{
-		//Ãß°¡
-		cout << "¼Ò¸êÀÚ È£Ãâ¿¡¼­ µ¿Àû¸Þ¸ð¸® ¸â¹ö ÇØÁ¦ µÊ~~" << endl;
+		//ì¶”ê°€
+		cout << "ì†Œë©¸ìž í˜¸ì¶œì—ì„œ ë™ì ë©”ëª¨ë¦¬ ë©¤ë²„ í•´ì œ ë¨~~" << endl;
 		delete[] name;
 		delete[] company;
 		delete[] phone;
@@ -114,6 +101,11 @@ int main(void)
 	manClerk.ShowNameCardInfo();
 	manSENIOR.ShowNameCardInfo();
 	manAssist.ShowNameCardInfo();
+
+	cout << endl;
+
+	NameCard man2(manAssist);
+	man2.ShowNameCardInfo();
 
 	return 0;
 }
