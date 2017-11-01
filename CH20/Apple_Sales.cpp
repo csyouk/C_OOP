@@ -75,7 +75,7 @@ public:
 
 int main(void){
 	AppleSeller seller(1000, 20, 0);
-	AppleBuyer buyer(5000, 0);
+	AppleBuyer buyer(50000, 0);
 
 	seller.SalesResult();
 	buyer.BuyerResult();
@@ -91,6 +91,13 @@ int main(void){
 	buyer.BuyApples(seller, 35000);
 
 	seller.SalesResult();
+	buyer.BuyerResult();
+
+	cout << "====================" << endl;
+
+	buyer.BuyApples(seller, 40000);
+	seller.SalesResult();
+	buyer.BuyerResult();
 
 	return 0;
 }
