@@ -20,6 +20,11 @@ public:
 
 	int SaleApples(int money){
 		int appleCnt = money / APPLE_PRICE;
+		if (numOfApples < appleCnt){
+			cout << "남은 사과수는 : " << numOfApples << endl;
+			cout << "구매할 최대금액은 : " << numOfApples* APPLE_PRICE << endl;
+			return 0;
+		}
 		numOfApples -= appleCnt; // 판매개수 - 
 		myMoney += money;				 // 수익금 증가
 		return appleCnt;
@@ -43,16 +48,19 @@ public:
 	}
 
 	void BuyApples(AppleSeller & seller, int money){
-		if (money < 0){
+		if (money <= 0){
 			cout << "구매금액은 0 이상이어야 합니다." << endl;
 			return;
 		}
-		if (money > myMoney){
+		else if (money > myMoney){
 			cout << "구매하고자 하는 금액이 내가 가진 금액보다 큽니다." << endl;
 			return;
 		}
+
+		int result = seller.SaleApples(money);
+		if (result == 0) return;
 		// 사과 구매수량 seller에서 처리한다.
-		numOfApples += seller.SaleApples(money); 
+		numOfApples += result;
 		/*
 			객체간의 통신은 메세지 전달에 의해 전달하게 되는데,
 			이러한 메세지는 그 객체에 있는 메소드를 호출하는 것이다.
