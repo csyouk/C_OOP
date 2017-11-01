@@ -16,6 +16,13 @@ public:
 	int GetAge(){
 		return age;
 	}
+
+	void SetName(){
+		
+	}
+	void SetAge(){
+		
+	}
 };
 
 // 상속 시키는 방법 ": public Person"
