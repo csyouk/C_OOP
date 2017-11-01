@@ -28,6 +28,9 @@
     <Filter Include="this_friend">
       <UniqueIdentifier>{6bdb0be5-72f4-48c1-8238-a0ebc7288379}</UniqueIdentifier>
     </Filter>
+    <Filter Include="문제">
+      <UniqueIdentifier>{91201695-179a-4fab-a204-aae1dd11b398}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OOP1.cpp">
@@ -125,6 +128,12 @@
     </ClCompile>
     <ClCompile Include="Friend1.cpp">
       <Filter>this_friend</Filter>
+    </ClCompile>
+    <ClCompile Include="friend2.cpp">
+      <Filter>this_friend</Filter>
+    </ClCompile>
+    <ClCompile Include="Apple_Sales.cpp">
+      <Filter>문제</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
