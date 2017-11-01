@@ -1,5 +1,4 @@
 #include <iostream>
-#include <C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vld.h>
 using namespace std;
 
 struct Point{

@@ -22,6 +22,9 @@
     <Filter Include="복사생성자">
       <UniqueIdentifier>{aa06af9b-04d3-4e74-9df9-97beffdc3891}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Const_Static">
+      <UniqueIdentifier>{c63ead39-befc-4082-9f8e-a43a0aacf05c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OOP1.cpp">
@@ -92,6 +95,21 @@
     </ClCompile>
     <ClCompile Include="Struct_Parameter.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PointClass_Move.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstValue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Const_Member1.cpp">
+      <Filter>Const_Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Const_OVerloading.cpp">
+      <Filter>Const_Static</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonCounter1.cpp">
+      <Filter>Const_Static</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
