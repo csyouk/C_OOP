@@ -36,17 +36,17 @@ Person::Person(char * _name, char * _phone, int _age){
 
 	// heap에 생성된 p1 메모리의 공간에 데이터를 채워줘야 한다.
 	name = new char[strlen(_name) + 1];
-	strcpy(name, _name);
 	phone = new char[strlen(_phone) + 1];
+	strcpy(name, _name);
 	strcpy(phone, _phone);
 	age = _age;
 }
 Person::Person(Person & ref){
 	// deepcopy
-	name = new char[strlen(ref.name) + 1];
-	strcpy(name, ref.name);
-	phone = new char[strlen(ref.phone) + 1];
-	strcpy(phone, ref.phone);
+	this->name = new char[strlen(ref.name) + 1];
+	this->phone = new char[strlen(ref.phone) + 1];
+	strcpy(this->name, ref.name);
+	strcpy(this->phone, ref.phone);
 	age = ref.age;
 }
 Person::~Person(){

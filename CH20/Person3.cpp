@@ -37,6 +37,12 @@ void Person::SetData(char * _name, char * _phone, int _age){
 	SetAge(_age);
 }
 
+void Person::SetData(char * name, char * phone, int age){
+	strcpy(this->name, name);
+	strcpy(this->phone, phone);
+	this->age = age;
+}
+
 void Person::ShowData(){
 	cout << name << "," << phone << "," << age << endl;
 }

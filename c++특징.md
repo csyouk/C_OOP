@@ -115,3 +115,9 @@ int main(void){
 
 ## 전역변수 접근 방법
 - :: 연산자를 붙여줘야 전역변수에 접근 가능하다.
+
+## this pointer의 지원
+
+## static/mutable
+
+## friend 키워드

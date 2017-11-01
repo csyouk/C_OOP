@@ -49,5 +49,6 @@ int main(void){
 
 	// 물론 객체에서 정적 함수를 호출할 수 있다.
 	p3.Counter();
+
 	return 0;
 }

@@ -5,4 +5,7 @@
 - [OOP](./OOP.md)
 - [const & mutable](./const-mutable.md)
 - [static](./static.md)
+- [Pointer-Array](./Pointer-Array.md)
+- [**this** pointer](./this.md)
+- [friend](./friend.md)
 - [VLD](./VLD.md)
