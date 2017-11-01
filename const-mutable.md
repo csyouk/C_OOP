@@ -106,7 +106,7 @@ const char *myName = person1.GetName();
 class Student{
 private:
 	const int id;
-	// 상수화됙 메서드가 이 멤버를 수정할 수 있게 해준다.
+	// 상수화된 메서드가 이 멤버를 수정할 수 있게 해준다.
 	mutable int age;
 	char name[20];
 	char major[30];
@@ -134,7 +134,7 @@ public:
 	}
 
 	// 상수화된 주소는 메소드로 반환 불가하다.
-	// 궂이 주소를 보내고 시다면, 상수화된 주소를 반환해야 한다.
+	// 주소를 보내고 싶다면, 상수화된 주소를 반환해야 한다.
 	const char * GetName() const
 	{  
 		return name;
@@ -155,7 +155,7 @@ int main(void){
 ```
 
 
-# Const객체는 클래스 내부에서 변경이 불가하다.
+## Const객체는 클래스 내부에서 값의 변경이 불가하다.
 - const로 선언된 객체는 const로 선언된 함수만 호출 할 수 있다.
 
 ```cpp
