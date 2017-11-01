@@ -38,6 +38,9 @@ class Student : public Person
 private:
 	char major[30];
 public:
+	Student()
+	{}
+
 	// 기반 클래스는 기반클래스의 생성을 책임지고
 	// 파생 클래스는 파생클래스의 생성을 책임져야 한다.
 	Student(char * name, int age, char * major)
@@ -65,8 +68,9 @@ public:
 int main(void){
 
 	Student s1("kim", 23, "computer science");
-
 	s1.ShowData();
 
+	Student s2;
+	s2.ShowData();
 	return 0;
 }
