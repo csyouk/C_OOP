@@ -159,6 +159,35 @@ int main(void){
 - const로 선언된 객체는 const로 선언된 함수만 호출 할 수 있다.
 
 ```cpp
-const AA a2 = AAA(200); <-- 에러.
-a2.ShowData();
+#include <iostream>
+
+class AAA
+{
+private:
+	int n;
+public:
+	AAA(int n)
+	{
+		this->n = n;
+	}
+
+	~AAA()
+	{
+		std::cout << "destroyed." << std::endl;
+	}
+
+	void ShowData(void) const
+	{
+		std::cout << "data : " << n << std::endl;
+	}
+};
+
+
+int main(void){
+
+	const AAA a1 = AAA(2);
+	// 만약 ShowData 메소드를 const로 제한하지 않았다면, 이 구문은 오류가 난다.
+	a1.ShowData();  
+	return 0;
+}
 ```

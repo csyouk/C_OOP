@@ -135,6 +135,9 @@
     <ClCompile Include="Apple_Sales.cpp">
       <Filter>문제</Filter>
     </ClCompile>
+    <ClCompile Include="Const.cpp">
+      <Filter>Const_Static</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Door.h">
