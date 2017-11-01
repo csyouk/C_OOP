@@ -8,7 +8,10 @@ private:
 	int age;
 public:
 	Person()
-	{}
+	{
+		age = 0;
+		strcpy(name, "noName");
+	}
 
 	char * GetName(){
 		return name;
