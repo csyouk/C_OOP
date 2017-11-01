@@ -153,7 +153,8 @@ int main(void){
 
 
 ## Protected
-- [전체 코드]()
+- [전체 코드](./CH_22/Inherit_Protected.cpp)
+
 ```cpp
 class Person
 {
