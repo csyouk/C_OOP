@@ -20,11 +20,11 @@ public:
 		return age;
 	}
 
-	void SetName(){
-		
+	void SetName(char * name){
+		strcpy(this->name, name);
 	}
-	void SetAge(){
-		
+	void SetAge(int age){
+		this->age = age;
 	}
 };
 
@@ -34,9 +34,11 @@ class Student : public Person
 private:
 	char major[30];
 public:
-	Student(char * _major)
+	Student(char * name, int age, char * major)
 	{
-		strcpy(major, _major);
+		SetName(name);
+		SetAge(age);
+		strcpy(this->major, major);
 	}
 	void ShowData(){
 		cout << "ÀÌ¸§ : " << GetName() << endl;
@@ -47,7 +49,7 @@ public:
 
 int main(void){
 
-	Student s1("computer science");
+	Student s1("kim", 23, "computer science");
 
 	s1.ShowData();
 
