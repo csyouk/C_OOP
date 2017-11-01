@@ -3,6 +3,7 @@
 - [Reference-Type](./Reference-Type.md)
 - [Method-Overloading](./Method-Overloading.md)
 - [OOP](./OOP.md)
+- [Inheritance](./Inheritance.md)
 - [const & mutable](./const-mutable.md)
 - [static](./static.md)
 - [Pointer-Array](./Pointer-Array.md)
