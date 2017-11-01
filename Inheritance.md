@@ -153,6 +153,12 @@ int main(void){
 
 
 ## Protected
+- 상속 관계에 놓여있을 경우 접근을 허용하게 하는 키워드이다.
+  - **상속관계에 있는 클래스에서는 public처럼 사용이 가능하다.**
+- 그 이외는 private 멤버와 동일.
+  - **즉, 상속받은 클래스 외부에서 접근은 불가능하다.**
+
+
 - [전체 코드](./CH_22/Inherit_Protected.cpp)
 
 ```cpp
@@ -177,5 +183,39 @@ class Student : public Person
 		cout << "전공 : " << major << endl;
 	}
 };
+```
 
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Base
+{
+private:
+	int priNum;
+protected:
+	int proNum;
+public:
+	int puNum;
+};
+
+class Derived : public Base
+{
+	void ShowData(){
+		cout << priNum << endl;  // error
+		cout << proNum << endl;
+		cout << puNum << endl;
+	}
+};
+
+int main(void){
+
+	Derived d1;
+	cout << d1.priNum << endl;  // error
+	cout << d1.proNum << endl;  // error
+	cout << d1.puNum << endl;
+
+	return 0;
+}
 ```
