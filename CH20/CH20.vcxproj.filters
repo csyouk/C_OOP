@@ -123,6 +123,9 @@
     <ClCompile Include="this_Pointer.cpp">
       <Filter>this_friend</Filter>
     </ClCompile>
+    <ClCompile Include="Friend1.cpp">
+      <Filter>this_friend</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Door.h">
