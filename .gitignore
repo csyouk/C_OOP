@@ -7,3 +7,5 @@ CH20\Debug\*
 *.idb
 *.pdb
 *.sdf
+*.sdf
+*.suo
