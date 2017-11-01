@@ -43,6 +43,14 @@ public:
 	}
 
 	void BuyApples(AppleSeller & seller, int money){
+		if (money < 0){
+			cout << "구매금액은 0 이상이어야 합니다." << endl;
+			return;
+		}
+		if (money > myMoney){
+			cout << "구매하고자 하는 금액이 내가 가진 금액보다 큽니다." << endl;
+			return;
+		}
 		// 사과 구매수량 seller에서 처리한다.
 		numOfApples += seller.SaleApples(money); 
 		/*
@@ -70,6 +78,11 @@ int main(void){
 
 	seller.SalesResult();
 	buyer.BuyerResult();
+
+	buyer.BuyApples(seller, -3000);
+	buyer.BuyApples(seller, 35000);
+
+	seller.SalesResult();
 
 	return 0;
 }
