@@ -2,7 +2,10 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <typeinfo>
+
+#define END_OF_SEARCHING 0
+#define MATCHING_ID_FOUND 0
+
 using namespace std;
 
 class Student
@@ -24,7 +27,11 @@ public:
 void Student::input()
 {
 	cout << "학번, 이름, 지역명 ?  ";
-	cin >> id >> name >> city;
+	cin >> id;
+	cin >> name >> city;
+
+	cin.clear();
+	cin.ignore(100, '\n');
 }
 
 void Student::print()
@@ -51,6 +58,9 @@ void University::input()
 	Student::input();
 	cout << "전공, 학점 ? ";
 	cin >> major >> grade;
+
+	cin.clear();
+	cin.ignore(100, '\n');
 }
 
 void University::print()
@@ -77,6 +87,9 @@ void PostGraduate::input()
 	Student::input();
 	cout << "학위 입력 ";
 	cin >> degree;
+
+	cin.clear();
+	cin.ignore(100, '\n');
 }
 
 void PostGraduate::print()
@@ -106,7 +119,13 @@ public:
 		srand(time(NULL));
 		cout << "\n입력할 건수 ? ";
 		cin >> Cnt;
-
+		if (cin.fail()){
+			cout << "=======숫자를 입력해주세요.=======" << endl;
+			cin.clear();
+			cin.ignore(100, '\n');
+			AddStudent();
+			return;
+		}
 		for (i = 0; i < Cnt; i++)
 		{
 			type = rand() % 2;
@@ -149,19 +168,19 @@ public:
 
 			found = 0;
 
-			if (inputID.compare(_end) == 0){
+			if (inputID.compare(_end) == END_OF_SEARCHING){
 				return;
 			}
 
 			for (i = 0; i < stuNum; i++){
-				if (STU[i]->GetID() == inputID){
+				if (STU[i]->GetID().compare(inputID) == MATCHING_ID_FOUND){
 					STU[i]->print();
 					found = 1;
 					break;
 				}
 			}
 
-			if (found){
+			if (!found){
 				cout << inputID << " Not found!!!" << endl;
 			}
 
@@ -191,7 +210,12 @@ int main()
 		cout << "4. 프로그램 종료 " << endl;
 		cout << "Select ? (1~4) ";
 		cin >> select;
-
+		if (cin.fail()){
+			cout << "=======숫자를 입력해주세요.=======" << endl;
+			cin.clear();
+			cin.ignore(100, '\n');
+			continue;
+		}
 		switch (select)
 		{
 		case 1: StuHandler.AddStudent();
