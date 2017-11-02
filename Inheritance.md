@@ -269,3 +269,86 @@ public:
 	}
 };
 ```
+
+
+## 객체 포인터(Object Pointer)
+- 객체의 주소 값을 저장할 수 있는 포인터
+
+![Object_Pointer](./img/Object_Pointer.jpg)
+
+- AAA 클래스의 포인터는 AAA 객체 뿐만 아니라, AAA 클래스를 상속하는 Derived 클래스 객체의 주소 값도 저장 가능
+- 포인터를 통해서 접근할 수 있는 객체 멤버의 영역.
+- **AAA 클래스의 객체 포인터는 가리키는 대상에 상관없이 AAA 클래스 내에 선언된 멤버에만 접근**
+
+### Upcasting
+- Upcasting이 왜 필요하게 되는것일까?
+- [원본 코드2](./CH_22/Is_A_Pointer1.cpp)
+- [원본 코드2](./CH_22/Is_A_Pointer2.cpp)
+
+```cpp
+class Person{
+public:
+	void Sleep() {cout << "Sleep()" << endl;}
+};
+
+class Student : public Person{
+public:
+	void Study(){cout << "Study()" << endl;}
+};
+
+class PartTimeStd : public Student{
+public:
+	void Work(){cout << "Work()" << endl;}
+};
+// Upcasting
+// 객체 포인터의 권한은 가리키는 대상(PartTimeStd)과 상관없이
+// 할당받은 객체의(s1) 멤버에만 접근 가능하다.
+Student * s1 = new PartTimeStd();
+s1->Sleep();
+s1->Study();
+```
+
+### Object Reference(객체 레퍼런스)
+- 객체 포인터와 마찬가지로, 권한이 달라진다.
+- [원본 코드](./CH_22/Is_A_Pointer_Reference.cpp)
+
+```cpp
+class Person{
+public:
+	void Sleep() { cout << "Sleep()" << endl; }
+};
+
+class Student : public Person{
+public:
+	void Study(){ cout << "Study()" << endl; }
+};
+
+class PartTimeStd : public Student{
+public:
+	void Work(){ cout << "Work()" << endl; }
+};
+
+PartTimeStd pt;
+Student & ref1 = pt;
+Person & ref2 = pt;
+
+pt.Sleep(); pt.Study(); pt.Work();
+cout << "===========================" << endl;
+
+ref1.Sleep(); ref1.Study();
+cout << "===========================" << endl;
+
+ref2.Sleep();
+// error
+// ref2.Work();
+```
+
+### Downcasting 이라는 개념은 없다.
+- 기반 클래스의 포인터는 파생클래스의 오브젝트의 주소를 저장할 수 있다. 그러나 파생클래스의 포인터는 기반클래스의 오브젝트 주소를 저장할 수 없다.
+- 기반클래스의 포인터가 파생클래스의 오브젝트를 가리킬 때 그 포인터를 통해 멤버함수를 호출하면 기반클래스로  부터 상속받은 멤버나, 멤버함수만 호출할 수 있다.
+
+```cpp
+// error
+// Downcasting
+Student * s2 = new Person();
+```

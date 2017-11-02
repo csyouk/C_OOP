@@ -4,6 +4,7 @@
 - [Method-Overloading](./Method-Overloading.md)
 - [OOP](./OOP.md)
 - [Inheritance](./Inheritance.md)
+- [Overriding.md](./Overriding.md)
 - [const & mutable](./const-mutable.md)
 - [static](./static.md)
 - [Pointer-Array](./Pointer-Array.md)
