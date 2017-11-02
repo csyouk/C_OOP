@@ -44,5 +44,7 @@ int main(void){
 	Point p3 = p1 + p2;
 	p3.ShowPos();
 
+
+
 	return 0;
 }
