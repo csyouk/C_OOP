@@ -239,6 +239,7 @@ int main(void){
 
 ## Static-Binding VS Dynamic Binding(Has-A)
 - 다음과 같은 관계가 있다고 해보자.
+- [원본 코드](./CH_22/CarClass_HasA.cpp)
 
 - **Static-Binding**
 

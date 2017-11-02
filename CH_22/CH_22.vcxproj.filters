@@ -13,31 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Has-A">
+      <UniqueIdentifier>{5758e845-f749-4958-8317-ef7a8cf0aaa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Is-A">
+      <UniqueIdentifier>{dffbc090-0c61-4b32-872b-c3d14c8a2af8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Inheritance1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Inheritance2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Inherit_Constructor.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Inherit_Protected.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Inheritance_Member_Access.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Student_Inherit_Destructor_EX.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Ring_Class_Has_A.cpp">
+      <Filter>Has-A</Filter>
     </ClCompile>
     <ClCompile Include="CarClass_HasA.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Has-A</Filter>
     </ClCompile>
-    <ClCompile Include="Ring_Class_Has_A.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Student_Inherit_Destructor_EX.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Inherit_Constructor.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Inherit_Protected.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance_Member_Access.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance1.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance2.cpp">
+      <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Is_A_Pointer.cpp">
+      <Filter>Is-A</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
