@@ -31,6 +31,9 @@
     <Filter Include="과제">
       <UniqueIdentifier>{23aa2490-f67c-4826-8d87-e9bd6f57308c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="과정평가">
+      <UniqueIdentifier>{4df11fcd-4fc3-4f25-90f8-f4e3ceea338b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring_Class_Has_A.cpp">
@@ -92,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="Employee_ClassEX.cpp">
       <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="Student_ClassEx.cpp">
+      <Filter>과정평가</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
