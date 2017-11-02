@@ -184,7 +184,9 @@ class Student : public Person
 	}
 };
 ```
-
+- 접근 지정자에 따른 멤버 접근 여부.
+  - 상속된 클래스에서 가능한 접근 지정자는?
+  - 클래스 외부에서 접근 가능한 지정자는?
 
 ```cpp
 #include <iostream>
@@ -218,4 +220,51 @@ int main(void){
 
 	return 0;
 }
+```
+
+
+## Has-A  Is-A
+- Has-a 관계 : A 가 B 를 가지고(포함하고) 있는 관계
+  - 예) 자동차는 타이어를 가지고 있다.
+- Is-a 관계 : A 가 B 인 관계
+  - 예) 사과는 과일이다., ~은 ~이다
+
+- **Has-a 관계의 경우에는 포함을 사용한다.**
+- **Is-a 관계의 경우에는 상속을 사용한다.**
+
+- 객체들을 모델링 할 때, Has-a 관계인지 Is-a 관계인지를 생각하면, 모델링이 조금 더 수월할 수도 있다.
+- Has-A 관계라면, 어떠한 클래스가 자신의 멤버로 다른 클래스를 가지고 있는 관계를 뜻한다.
+
+- Has-A와 Is-A의 경계는 명확하지 않다.
+
+## Static-Binding VS Dynamic Binding(Has-A)
+- 다음과 같은 관계가 있다고 해보자.
+
+- **Static-Binding**
+
+```cpp
+class Engine{ ... };
+
+class Car
+{
+private:
+  // static binding
+	Engine engine;
+};
+```
+
+- **Dynamic-Binding**
+
+```cpp
+class Engine{ ... };
+class Car
+{
+private:
+	Engine * engine;
+public:
+	Car{
+    // dynamic binding
+		engine = new Engine;
+	}
+};
 ```
