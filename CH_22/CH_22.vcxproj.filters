@@ -25,6 +25,9 @@
     <Filter Include="Virtual">
       <UniqueIdentifier>{8c51dcc4-de2f-48bc-a7cc-1111b4143057}</UniqueIdentifier>
     </Filter>
+    <Filter Include="다중상속">
+      <UniqueIdentifier>{07d78965-5aaf-4f29-951f-aa3c6443a0d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring_Class_Has_A.cpp">
@@ -65,6 +68,21 @@
     </ClCompile>
     <ClCompile Include="Overriding2.cpp">
       <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="Overriding3.cpp">
+      <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeOverriding_EX2.cpp">
+      <Filter>Overriding</Filter>
+    </ClCompile>
+    <ClCompile Include="Virtual_Destructor_1.cpp">
+      <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="Virtual_Destructor_2.cpp">
+      <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="Multiple_Inheritance.cpp">
+      <Filter>다중상속</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

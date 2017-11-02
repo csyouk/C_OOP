@@ -4,8 +4,11 @@
 - [Method-Overloading](./Method-Overloading.md)
 - [OOP](./OOP.md)
 - [Inheritance](./Inheritance.md)
+- [Multiple-Inheritance](./Multiple-Inheritance.md)
+  - Diamond problem.
 - [Overriding](./Overriding.md)
 - [Virtual](./virtual.md)
+- [Abstract-Class](./Abstract-Class.md)
 - [const & mutable](./const-mutable.md)
 - [static](./static.md)
 - [Pointer-Array](./Pointer-Array.md)
