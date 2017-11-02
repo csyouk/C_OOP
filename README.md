@@ -8,6 +8,7 @@
   - Diamond problem.
 - [Overriding](./Overriding.md)
 - [Virtual](./virtual.md)
+- [Operator Overloading](./Operator-Overloading.md)
 - [Abstract-Class](./Abstract-Class.md)
 - [const & mutable](./const-mutable.md)
 - [static](./static.md)
