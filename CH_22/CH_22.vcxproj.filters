@@ -19,6 +19,9 @@
     <Filter Include="Is-A">
       <UniqueIdentifier>{dffbc090-0c61-4b32-872b-c3d14c8a2af8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Overriding">
+      <UniqueIdentifier>{ed9cb704-ab88-46c3-9261-f1aef603b225}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring_Class_Has_A.cpp">
@@ -53,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="Is_A_Pointer_Reference.cpp">
       <Filter>Is-A</Filter>
+    </ClCompile>
+    <ClCompile Include="Overriding1.cpp">
+      <Filter>Overriding</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
