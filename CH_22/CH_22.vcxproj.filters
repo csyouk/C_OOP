@@ -28,6 +28,9 @@
     <Filter Include="다중상속">
       <UniqueIdentifier>{07d78965-5aaf-4f29-951f-aa3c6443a0d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="과제">
+      <UniqueIdentifier>{23aa2490-f67c-4826-8d87-e9bd6f57308c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring_Class_Has_A.cpp">
@@ -81,8 +84,14 @@
     <ClCompile Include="Virtual_Destructor_2.cpp">
       <Filter>Virtual</Filter>
     </ClCompile>
-    <ClCompile Include="Multiple_Inheritance.cpp">
+    <ClCompile Include="Multiple_Inheritance1.cpp">
       <Filter>다중상속</Filter>
+    </ClCompile>
+    <ClCompile Include="Multiple_Inheritance2.cpp">
+      <Filter>다중상속</Filter>
+    </ClCompile>
+    <ClCompile Include="Employee_ClassEX.cpp">
+      <Filter>과제</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

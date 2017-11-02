@@ -1,4 +1,4 @@
-//Employee_ClassEX.cpp
+ï»¿//Employee_ClassEX.cpp
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -27,7 +27,7 @@ public:
 	
 	void ShowSalaryInfo() const
 	{
-		cout << " PermanentWorker  ->";
+		cout << "PermanentWorker  -> ";
 		ShowYourName();
 		cout << ", salary: " << GetPay() << endl << endl;
 	}
@@ -36,29 +36,26 @@ public:
 class SalesWorker : public PermanentWorker
 {
 private:
-	int salesResult;      //¿ù ÆÇ¸Å½ÇÀû
-	double bonusRatio;    //»ó¿©±Ý ºñÀ² 
+	int salesResult;      //ì›” íŒë§¤ì‹¤ì 
+	double bonusRatio;    //ìƒì—¬ê¸ˆ ë¹„ìœ¨ 
 public:
 	SalesWorker(char * name, int money, double ratio, int val)
 		: PermanentWorker(name, money), salesResult(val), bonusRatio(ratio)
 	{  }
 
 	int GetPay() const
-	{
-		return PermanentWorker::GetPay()
-			+ (int)(salesResult*bonusRatio);
-	}
+	{ return PermanentWorker::GetPay() + (int)(salesResult*bonusRatio); }
 
 	void ShowSalaryInfo() const
 	{
-		cout << " SalesWorker  ->";
+		cout << "SalesWorker  -> ";
 		ShowYourName();
-		cout << " , salary: " << PermanentWorker::GetPay() << " ,ÆÇ¸Å»ó¿©±Ý: " << (int)(salesResult*bonusRatio) << ", ÇÕ°è : " << GetPay() << endl << endl;
+		cout << " , salary: " << PermanentWorker::GetPay() << " ,íŒë§¤ìƒì—¬ê¸ˆ: " << (int)(salesResult*bonusRatio) << ", í•©ê³„ : " << GetPay() << endl << endl;
 	}
 };
 
 
-//***** ÇÚµé·¯
+//***** í•¸ë“¤ëŸ¬
 class EmployeeHandler
 {
 private:
@@ -73,12 +70,19 @@ public:
 
 	void ShowAllSalaryInfo() const
 	{
-
+		int i;
+		for ( i = 0; i < empNum; i++)
+			empList[i]->ShowSalaryInfo();
 	}
 
 	void ShowTotalSalary() const
 	{
-		
+		int sum = 0;
+		for (int i = 0; i < empNum; i++)
+			sum += empList[i]->GetPay();
+		cout << "=============================" << endl;
+		cout << "ì´ë²ˆ ë‹¬ ê¸‰ì—¬ì˜ ì´í•© : " << sum << endl;
+		cout << "=============================" << endl;
 	}
 
 	~EmployeeHandler()
@@ -90,23 +94,23 @@ public:
 
 int main()
 {
-	// Á÷¿ø°ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½ºÀÇ °´Ã¼»ý¼º
+	// ì§ì›ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ëž˜ìŠ¤ì˜ ê°ì²´ìƒì„±
 	EmployeeHandler handler;
 
-	// Á¤±ÔÁ÷  µî·Ï
+	// ì •ê·œì§  ë“±ë¡
 	handler.AddEmployee(new PermanentWorker("KIM", 1000));
 	handler.AddEmployee(new PermanentWorker("LEE", 1500));
 	handler.AddEmployee(new PermanentWorker("JUN", 2000));
 
-	// ¿µ¾÷Á÷ µî·Ï                              //¿ù±Þ,»ó¿©±ÝºñÀ²,¿µ¾÷½ÇÀû
+	// ì˜ì—…ì§ ë“±ë¡                              //ì›”ê¸‰,ìƒì—¬ê¸ˆë¹„ìœ¨,ì˜ì—…ì‹¤ì 
 	handler.AddEmployee(new SalesWorker("Hong", 1000, 0.1, 7000));
 	handler.AddEmployee(new SalesWorker("Moon", 2000, 0.1, 5000));
 
-	// ÀÌ¹ø ´Þ¿¡ ÁöºÒÇØ¾ß ÇÒ ±Þ¿©ÀÇ Á¤º¸
-	//handler.ShowAllSalaryInfo();
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´
+	handler.ShowAllSalaryInfo();
 
-	// ÀÌ¹ø ´Þ¿¡ ÁöºÒÇØ¾ß ÇÒ ±Þ¿©ÀÇ ÃÑÇÕ
-	//handler.ShowTotalSalary();
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì´í•©
+	handler.ShowTotalSalary();
 
 	return 0;
 }
