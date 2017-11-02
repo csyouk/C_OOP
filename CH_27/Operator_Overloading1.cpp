@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 class Point
@@ -75,11 +75,10 @@ bool Point::operator==(const Point & right)
 		return false;
 }
 
-bool Point::operator!=(const Point & right)
+bool Point::operator!=(const Point & ref)
 {
 	return !(*this == ref);
 }
-
 
 Point& Point::operator+=(const Point & ref)
 {
@@ -105,7 +104,7 @@ int main(void){
 	Point p1(3, 4);
 	p1.ShowPos();
 
-	// ÄÄÆÄÀÏ·¯´Â ¾Æ·¡½ÄÀ» ´ÙÀ½°ú °°ÀÌ ÇØ¼®ÇÑ´Ù.
+	// ì»´íŒŒì¼ëŸ¬ëŠ” ì•„ë˜ì‹ì„ ë‹¤ìŒê³¼ ê°™ì´ í•´ì„í•œë‹¤.
 	// p1.operator + (10)
 	Point p2 = p1 + 10;
 	p2.ShowPos();
