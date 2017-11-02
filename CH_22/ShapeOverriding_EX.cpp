@@ -43,10 +43,7 @@ private:
 	double height; 
 public:
 	Rectangle();
-	Rectangle(double x, double y, double w, double h) : Point(x, y){
-		width = w; 
-		height = h;
-	}
+	Rectangle(double, double, double, double);
 	void Draw() const;
 };
 //생성자 정의
@@ -54,11 +51,13 @@ Rectangle::Rectangle()
 {
 	width = height = 100.0f;
 }
-
+Rectangle::Rectangle(double x, double y, double w, double h) : Point(x, y){
+	width = w;
+	height = h;
+}
 //Rectangle Draw() 메서드 정의
 void Rectangle::Draw() const{
-		cout << "[Rectangle] Position = ( " << xpos << ", " << ypos << 
-		") Size = ( " << width << ", " << height << ")\n";
+		cout << "[Rectangle] Position = ( " << xpos << ", " << ypos << ") Size = ( " << width << ", " << height << ")\n";
 }
 
 
@@ -69,10 +68,7 @@ private:
 	double radius; 
 public:
 	Circle();
-	Circle(double x, double y, double r) : Point(x,y)
-	{
-		radius = r;
-	}
+	Circle(double, double, double);
 	void Draw() const;
 };
 //생성자 정의
@@ -80,11 +76,13 @@ Circle::Circle()
 {
 	radius = 100.0f;
 }
-
+Circle::Circle(double x, double y, double r) : Point(x, y)
+{
+	radius = r;
+}
 //Circle Draw() 메서드 정의
 void Circle::Draw() const{
-	cout << "[Circle] Position = ( " << xpos << ", " << ypos <<
-		") Radius = " << radius << "\n";
+	cout << "[Circle] Position = ( " << xpos << ", " << ypos << ") Radius = " << radius << "\n";
 }
 
 

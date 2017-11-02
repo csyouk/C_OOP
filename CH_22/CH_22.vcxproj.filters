@@ -22,6 +22,9 @@
     <Filter Include="Overriding">
       <UniqueIdentifier>{ed9cb704-ab88-46c3-9261-f1aef603b225}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Virtual">
+      <UniqueIdentifier>{8c51dcc4-de2f-48bc-a7cc-1111b4143057}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ring_Class_Has_A.cpp">
@@ -45,9 +48,6 @@
     <ClCompile Include="Inheritance1.cpp">
       <Filter>Is-A</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance2.cpp">
-      <Filter>Is-A</Filter>
-    </ClCompile>
     <ClCompile Include="Is_A_Pointer2.cpp">
       <Filter>Is-A</Filter>
     </ClCompile>
@@ -62,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="ShapeOverriding_EX.cpp">
       <Filter>Overriding</Filter>
+    </ClCompile>
+    <ClCompile Include="Overriding2.cpp">
+      <Filter>Virtual</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
