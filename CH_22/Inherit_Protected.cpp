@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 class Person
 {
-// ±âº»Àº private°ú µ¿ÀÏÇÏ°Ô µ¿ÀÛÇÑ´Ù.
-// protectedÀÇ ±â´ÉÀº »ó¼Ó°ü°è¿¡¼­ ÆÄ¾ÇÇØ¾ß ÇÑ´Ù.
+// ê¸°ë³¸ì€ privateê³¼ ë™ì¼í•˜ê²Œ ë™ì‘í•œë‹¤.
+// protectedì˜ ê¸°ëŠ¥ì€ ìƒì†ê´€ê³„ì—ì„œ íŒŒì•…í•´ì•¼ í•œë‹¤.
 protected:
 	char name[20];
 	int age;
@@ -34,7 +34,7 @@ public:
 	}
 };
 
-// »ó¼Ó ½ÃÅ°´Â ¹æ¹ı ": public Person"
+// ìƒì† ì‹œí‚¤ëŠ” ë°©ë²• ": public Person"
 class Student : public Person
 {
 private:
@@ -46,14 +46,14 @@ public:
 		strcpy(this->major, major);
 	}
 	void ShowData(){
-		// private¼±¾ğ½Ã name°ú age´Â Á¢±ÙÀÌ ºÒ°¡´É ÇßÀ¸³ª,
-		// protected·Î ¸¸µé½Ã , name°ú age´Â Á÷Á¢ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-		// »ó¼Ó ¹ŞÀº Å¬·¡½º¿¡¼­´Â publicÃ³·³ »ç¿ëÇÒ ¼ö ÀÖ°Ô µÈ´Ù.
-		// ÇÏÁö¸¸, Á¤º¸ Àº´Ğ¿¡ À§¹è°¡ ÀÏ¾î³ª°Ô µÈ´Ù.
-		// µû¶ó¼­ ½ÇÁúÀûÀ¸·Î »ç¿ë¼ºÀÌ ¸¹Àº ÆíÀº ¾Æ´Ï´Ù.
-		cout << "ÀÌ¸§ : " << name << endl;
-		cout << "³ªÀÌ : " << age << endl;
-		cout << "Àü°ø : " << major << endl;
+		// privateì„ ì–¸ì‹œ nameê³¼ ageëŠ” ì ‘ê·¼ì´ ë¶ˆê°€ëŠ¥ í–ˆìœ¼ë‚˜,
+		// protectedë¡œ ë§Œë“¤ì‹œ , nameê³¼ ageëŠ” ì§ì ‘ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
+		// ìƒì† ë°›ì€ í´ë˜ìŠ¤ì—ì„œëŠ” publicì²˜ëŸ¼ ì‚¬ìš©í•  ìˆ˜ ìˆê²Œ ëœë‹¤.
+		// í•˜ì§€ë§Œ, ì •ë³´ ì€ë‹‰ì— ìœ„ë°°ê°€ ì¼ì–´ë‚˜ê²Œ ëœë‹¤.
+		// ë”°ë¼ì„œ ì‹¤ì§ˆì ìœ¼ë¡œ ì‚¬ìš©ì„±ì´ ë§ì€ í¸ì€ ì•„ë‹ˆë‹¤.
+		cout << "ì´ë¦„ : " << name << endl;
+		cout << "ë‚˜ì´ : " << age << endl;
+		cout << "ì „ê³µ : " << major << endl;
 	}
 };
 

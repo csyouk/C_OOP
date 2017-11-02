@@ -60,5 +60,8 @@
     <ClCompile Include="Overriding1.cpp">
       <Filter>Overriding</Filter>
     </ClCompile>
+    <ClCompile Include="ShapeOverriding_EX.cpp">
+      <Filter>Overriding</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

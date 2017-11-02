@@ -1,8 +1,8 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstring>
 using namespace std;
 
-/*½ÇÇà°á°ú
+/*ì‹¤í–‰ê²°ê³¼
 My name is kim
 My age is 10
 
@@ -19,8 +19,8 @@ My major is Computer eng.
 class Person
 {
 private:
-	char *name;     // ÀÌ¸§
-	int age;        // ³ªÀÌ
+	char *name;     // ì´ë¦„
+	int age;        // ë‚˜ì´
 public:
 	Person(char * myname, int myage)
 	{
@@ -44,7 +44,7 @@ public:
 class Student : public Person
 {
 private:
-	char * major;     // Àü°ø°ú¸ñ
+	char * major;     // ì „ê³µê³¼ëª©
 public:
 	Student(char * myname, int myage, char * mymajor)
 		: Person(myname, myage)
@@ -59,8 +59,8 @@ public:
 	}
 	void ShowStudent() const
 	{
-		//±â¹İÅ¬·¡½º ¸â¹öÃâ·Â ÄÚµåÃß°¡
-		// ¾Æ·¡ µÎ°¡Áö ¸ğµÎ °¡´ÉÇÏ´Ù.
+		//ê¸°ë°˜í´ë˜ìŠ¤ ë©¤ë²„ì¶œë ¥ ì½”ë“œì¶”ê°€
+		// ì•„ë˜ ë‘ê°€ì§€ ëª¨ë‘ ê°€ëŠ¥í•˜ë‹¤.
 		//__super::ShowPerson();
 		ShowPerson();
 		

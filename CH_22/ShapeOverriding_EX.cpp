@@ -1,10 +1,10 @@
-/*
-ÀÏ¹ÝÀûÀÎ µµÇüÀ» ÀÇ¹ÌÇÏ´Â Point(ÁÂÇ¥°ª ÀúÀå)Å¬·¡½º¿Í »ç°¢ÇüÀ» ÀÇ¹ÌÇÏ´Â 
-Rectangle(ÁÂÇ¥,°¡·Î,¼¼·Î) Å¬·¡½º, ¿øÀ» ÀÇ¹ÌÇÏ´Â Circle(ÁÂÇ¥,¹ÝÁö¸§)Å¬·¡½º¸¦ Á¤ÀÇÇÑ´Ù.
-»ç°¢Çü°ú ¿øÀº µµÇüÀÇ ÀÏÁ¾ÀÌ¹Ç·Î PointÅ¬·¡½º¿Í »ó¼Ó°ü°è¸¦ ±¸¼ºÇÑ´Ù.
-´ÙÀ½ main() ÇÔ¼ö¸¦ Âü°íÇÏ¿© ´ÙÀ½ÀÇ °á°ú¸¦ Ãâ·ÂÇÑ´Ù.
+ï»¿/*
+ì¼ë°˜ì ì¸ ë„í˜•ì„ ì˜ë¯¸í•˜ëŠ” Point(ì¢Œí‘œê°’ ì €ìž¥)í´ëž˜ìŠ¤ì™€ ì‚¬ê°í˜•ì„ ì˜ë¯¸í•˜ëŠ” 
+Rectangle(ì¢Œí‘œ,ê°€ë¡œ,ì„¸ë¡œ) í´ëž˜ìŠ¤, ì›ì„ ì˜ë¯¸í•˜ëŠ” Circle(ì¢Œí‘œ,ë°˜ì§€ë¦„)í´ëž˜ìŠ¤ë¥¼ ì •ì˜í•œë‹¤.
+ì‚¬ê°í˜•ê³¼ ì›ì€ ë„í˜•ì˜ ì¼ì¢…ì´ë¯€ë¡œ Pointí´ëž˜ìŠ¤ì™€ ìƒì†ê´€ê³„ë¥¼ êµ¬ì„±í•œë‹¤.
+ë‹¤ìŒ main() í•¨ìˆ˜ë¥¼ ì°¸ê³ í•˜ì—¬ ë‹¤ìŒì˜ ê²°ê³¼ë¥¼ ì¶œë ¥í•œë‹¤.
 
-½ÇÇà°á°ú
+ì‹¤í–‰ê²°ê³¼
 [Point] Position = ( 100, 100)
 [Rectangle] Position = ( 200, 100) Size = ( 50, 50)
 [Circle] Position = ( 300, 100) Radius = 30
@@ -13,7 +13,7 @@ Rectangle(ÁÂÇ¥,°¡·Î,¼¼·Î) Å¬·¡½º, ¿øÀ» ÀÇ¹ÌÇÏ´Â Circle(ÁÂÇ¥,¹ÝÁö¸§)Å¬·¡½º¸¦ Á¤ÀÇ
 #include <iostream>
 using namespace std;
 
-//ÀÏ¹ÝÀûÀÎ 'µµÇü'À» »óÂ¡ÇÏ´Â Å¬·¡½º
+//ì¼ë°˜ì ì¸ 'ë„í˜•'ì„ ìƒì§•í•˜ëŠ” í´ëž˜ìŠ¤
 class Point
 {
 protected:
@@ -31,59 +31,74 @@ public:
 	void Draw() const;
 };
 
-void Point::Draw() const
-{
+void Point::Draw() const{
 	cout << "[Point] Position = ( " << xpos << ", " << ypos << ")\n";
 }
 
-// »ç°¢ÇüÀ» »óÂ¡ÇÏ´Â Å¬·¡½º
+// ì‚¬ê°í˜•ì„ ìƒì§•í•˜ëŠ” í´ëž˜ìŠ¤
 class Rectangle : public Point
 {
 private:
 	double width;
 	double height; 
 public:
-	 
+	Rectangle();
+	Rectangle(double x, double y, double w, double h) : Point(x, y){
+		width = w; 
+		height = h;
+	}
+	void Draw() const;
 };
-//»ý¼ºÀÚ Á¤ÀÇ
+//ìƒì„±ìž ì •ì˜
 Rectangle::Rectangle()
 {
 	width = height = 100.0f;
 }
 
-//Rectangle Draw() ¸Þ¼­µå Á¤ÀÇ
+//Rectangle Draw() ë©”ì„œë“œ ì •ì˜
+void Rectangle::Draw() const{
+		cout << "[Rectangle] Position = ( " << xpos << ", " << ypos << 
+		") Size = ( " << width << ", " << height << ")\n";
+}
 
 
-
-// ¿øÀ» »óÂ¡ÇÏ´Â Å¬·¡½º
+// ì›ì„ ìƒì§•í•˜ëŠ” í´ëž˜ìŠ¤
 class Circle : public Point
 {
 private:
 	double radius; 
 public:
-	 
+	Circle();
+	Circle(double x, double y, double r) : Point(x,y)
+	{
+		radius = r;
+	}
+	void Draw() const;
 };
-//»ý¼ºÀÚ Á¤ÀÇ
+//ìƒì„±ìž ì •ì˜
 Circle::Circle()
 {
 	radius = 100.0f;
 }
 
-//Circle Draw() ¸Þ¼­µå Á¤ÀÇ
-
+//Circle Draw() ë©”ì„œë“œ ì •ì˜
+void Circle::Draw() const{
+	cout << "[Circle] Position = ( " << xpos << ", " << ypos <<
+		") Radius = " << radius << "\n";
+}
 
 
 int main()
 {
-	// µµÇü °´Ã¼ »ý¼º ¹× ±×¸®±â
-	Point s( 100, 100);
+	// ë„í˜• ê°ì²´ ìƒì„± ë° ê·¸ë¦¬ê¸°
+	Point s(100, 100);
 	s.Draw();
 
-	// »ç°¢Çü °´Ã¼ »ý¼º ¹× ±×¸®±â
+	// ì‚¬ê°í˜• ê°ì²´ ìƒì„± ë° ê·¸ë¦¬ê¸°
 	Rectangle r( 200, 100, 50, 50);
 	r.Draw();
 
-	// ¿ø °´Ã¼ »ý¼º ¹× ±×¸®±â
+	// ì› ê°ì²´ ìƒì„± ë° ê·¸ë¦¬ê¸°
 	Circle c(300, 100, 30);
 	c.Draw();
 
