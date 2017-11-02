@@ -24,6 +24,7 @@ int operator+(int a, int b)  	// 정의 불가능한 함수
 ```
 
 - 다음은 연산자 오버로딩을 통해 Point 클래스를 정의한 예이다.
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -164,6 +165,124 @@ int main(void){
 	else
 		cout << "Equal" << endl;
 
+	return 0;
+}
+```
+
+## 단항 연산자 오버로딩
+- 단항 연산자에서 전치 연산과 후치 연산은 이름도 같고 피연산자의 수도 같기 때문에 동일하게 해석한다
+
+```cpp
+(p1++).ShowPosition();    =>  p1.operator++ ()
+(++p2).ShowPosition();    =>  p1.operator++ ()
+```
+
+- ++, -- 를 중복정의할 때에는 전위형과 후위형에 따라 연산자 함수를 다르게 만들어야 한다.
+- 전위형 연산자 함수는 인자를 갖지 않지만, 후위형 연산자 함수는 int형  인자를 갖는다.
+- 후위형 연산자 함수가 인수를 갖는 것은 전위형 연산자 함수와 구별하기 위함이지 실제 그 인수가 사용되는 것은 아니다.
+
+```cpp
+++p   ->   p.operator++();  
+p++   ->   p.operator++(int);
+```
+
+- 다음은 전치 연산자를 정의한 예시이다.
+- 전치 연산의 정의는 반드시, 연산의 결과를 reference 형태로 만들어야 한다.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Point
+{
+private:
+	int x, y;
+public:
+	Point(int x, int y){ this->x = x; this->y = y; }
+	void ShowPos() { cout << "Point : " << x << "," << y << endl; }
+	Point & operator++(){ x++; y++; return *this; }
+	Point & operator--(){ x--; y--; return *this; }
+};
+
+int main(void){
+
+	Point p1(1, 2);
+	p1.ShowPos();
+	// 단항연산자는 p1.operator++(); 로 해석된다.
+	++p1;
+	p1.ShowPos();
+
+	// 단항연산자는 p1.operator--(); 로 해석된다.
+	--p1;
+	p1.ShowPos();
+
+	// return 타입을 *this로 만들면 연속적인 계산이 가능하다.
+	++(++(++p1));
+	p1.ShowPos();
+
+	(++(++(++p1))).ShowPos();
+	return 0;
+}
+```
+
+- 다음은 후치 연산자를 정의한 예시이다.
+- 후치 연산의 정의는 반드시, 연산의 결과를 copy value 형태로 만들어야 한다.
+
+```cpp
+#include <iostream>
+using namespace std;
+class Point{
+private:
+	int x, y;
+public:
+	Point(int x, int y){ this->x = x; this->y = y; }
+	void ShowPos() { cout << "Point : " << x << "," << y << endl; }
+	Point operator++(int){
+		Point tmp(x++, y++);
+		return tmp;
+	}
+	Point operator++(){
+		x++; y++;
+		return *this;
+	}
+	friend Point operator--(Point &, int);
+};
+
+// 전역함수 연산자 오버로딩은 클래스에 추가시
+// friend 키워드를 추가해야 한다.
+// 그래야 private에 접근이 가능하다.
+Point operator--(Point & p, int)
+{
+	Point tmp(p.x--, p.y--);
+	return tmp;
+}
+
+int main(void){
+
+	Point p1(1, 1);
+	p1.ShowPos();
+
+	cout << "Point p2 = p1++;" << endl;
+	// 후치 연산은 p1.operator++(); 과 같이 처리된다.
+	// 후치 연산은 연산의 전과 후가 값이 달라야 한다.
+	Point p2 = p1++; // p1.operator++(int);
+	p1.ShowPos(); // 2,2
+	p2.ShowPos(); // 1,1
+	cout << "============================================" << endl;
+
+	Point p3(1, 1);  // p3.operatpr++();
+	Point p4 = ++p3;
+	p3.ShowPos(); // 2,2
+	p4.ShowPos(); // 2,2
+	cout << "============================================" << endl;
+
+  Point p5(3, 3);
+	// p5.operator--(int);  // 멤버함수 연산자 오버로딩.
+	// operator--(p5, int); // 전역함수 연산자 오버로딩.
+	Point p6 = p5--;
+  
+	p5.ShowPos(); // 2,2
+	p6.ShowPos(); // 3,3
 	return 0;
 }
 ```

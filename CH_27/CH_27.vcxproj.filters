@@ -27,5 +27,11 @@
     <ClCompile Include="Operator_Overloading2.cpp">
       <Filter>연산자_오버로딩</Filter>
     </ClCompile>
+    <ClCompile Include="Operator_Overloading3.cpp">
+      <Filter>연산자_오버로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="Operator_Overloading4.cpp">
+      <Filter>연산자_오버로딩</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
