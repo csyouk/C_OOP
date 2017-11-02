@@ -80,9 +80,9 @@ public:
 		int sum = 0;
 		for (int i = 0; i < empNum; i++)
 			sum += empList[i]->GetPay();
-		cout << "=============================" << endl;
-		cout << "이번 달 급여의 총합 : " << sum << endl;
-		cout << "=============================" << endl;
+		cout << "==================================" << endl;
+		cout << "   이번 달 급여의 총합 : " << sum << endl;
+		cout << "==================================" << endl;
 	}
 
 	~EmployeeHandler()
