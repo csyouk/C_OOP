@@ -9,15 +9,14 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="연산자_오버로딩">
       <UniqueIdentifier>{7ab16861-0f35-473a-90de-52c94fab05f9}</UniqueIdentifier>
     </Filter>
     <Filter Include="IOStream">
       <UniqueIdentifier>{8ff4b497-2510-4489-8bab-07818d21f9a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="대입연산자">
+      <UniqueIdentifier>{4182af0b-1690-430e-9bf5-cba0b89c5394}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +49,12 @@
     </ClCompile>
     <ClCompile Include="OStream_Point.cpp">
       <Filter>IOStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_Assignment_Operator.cpp">
+      <Filter>대입연산자</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_EqualOP_CopyCon3.cpp">
+      <Filter>대입연산자</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

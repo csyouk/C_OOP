@@ -16,6 +16,7 @@
 - [**this** pointer](./this.md)
 - [friend](./friend.md)
 - [iosteam](./iostream.md)
+- [Default_Assignment Operator](Default_Assignment_Operator.md)
 - [VLD](./VLD.md)
 - [Rule Of Three](./Rule-Of-Three.md)
 
