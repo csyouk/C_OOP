@@ -16,7 +16,7 @@ public:
 };
 
 template<typename T>
-Stack<T>::Stack(int len)
+Stack<T>::Stack(int len=0)  // 생성자의 인수가 반드시 있어야 한다.
 {
 	topIdx=-1;		// 스택 인덱스 초기화.
 	stackPtr = new T[len];	// 데이터 저장 위한 배열 선언.
@@ -72,6 +72,15 @@ int main()
 		stack2.Push(10 + i);
 	for (int i = 0; i < 11; i++)
 		cout << stack2.Pop() << endl;
+
+
+	cout << "======================" << endl << endl;
+
+	Stack<double> stack3(10);
+	for (int i = 0; i < 11; i++)
+		stack3.Push(10.1 + i);
+	for (int i = 0; i < 11; i++)
+		cout << stack3.Pop() << endl;
 
 	return 0;
 }

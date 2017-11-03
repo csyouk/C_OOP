@@ -62,3 +62,5 @@ cout << Add<int>(10, 20) << endl;
 // 클래스 템플릿은 명시적 방법의 생성이 필요하다.
 Point<int> p1(10, 10);
 ```
+
+- [Stack ADT의 class template화](./CH_29/StackTemplate1.cpp)
