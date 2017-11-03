@@ -280,9 +280,18 @@ int main(void){
 	// p5.operator--(int);  // 멤버함수 연산자 오버로딩.
 	// operator--(p5, int); // 전역함수 연산자 오버로딩.
 	Point p6 = p5--;
-  
+
 	p5.ShowPos(); // 2,2
 	p6.ShowPos(); // 3,3
+  cout << "============================================" << endl;
+
+  Point p7(5, 5);
+  // 전치 연산자를 전역함수로 구현해 보자.
+  // 멤버일 경우는 p7.operator--();
+  // 전역일 경우는 operator--(p7);
+  Point p8 = --p7;
+  p7.ShowPos(); // 4,4
+  p8.ShowPos(); // 4,4
 	return 0;
 }
 ```

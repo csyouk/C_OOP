@@ -16,6 +16,9 @@
     <Filter Include="연산자_오버로딩">
       <UniqueIdentifier>{7ab16861-0f35-473a-90de-52c94fab05f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IOStream">
+      <UniqueIdentifier>{8ff4b497-2510-4489-8bab-07818d21f9a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Operator_Intro.cpp">
@@ -32,6 +35,21 @@
     </ClCompile>
     <ClCompile Include="Operator_Overloading4.cpp">
       <Filter>연산자_오버로딩</Filter>
+    </ClCompile>
+    <ClCompile Include="OStream_1.cpp">
+      <Filter>IOStream</Filter>
+    </ClCompile>
+    <ClCompile Include="OStream_2.cpp">
+      <Filter>IOStream</Filter>
+    </ClCompile>
+    <ClCompile Include="IStream_1.cpp">
+      <Filter>IOStream</Filter>
+    </ClCompile>
+    <ClCompile Include="IStream_Point.cpp">
+      <Filter>IOStream</Filter>
+    </ClCompile>
+    <ClCompile Include="OStream_Point.cpp">
+      <Filter>IOStream</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
