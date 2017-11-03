@@ -51,5 +51,8 @@
     <ClCompile Include="STL_Map.cpp">
       <Filter>STL</Filter>
     </ClCompile>
+    <ClCompile Include="STL_Map3.cpp">
+      <Filter>STL</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
