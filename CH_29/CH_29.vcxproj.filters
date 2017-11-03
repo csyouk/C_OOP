@@ -45,5 +45,8 @@
     <ClCompile Include="STL_List.cpp">
       <Filter>STL</Filter>
     </ClCompile>
+    <ClCompile Include="STL_Vector.cpp">
+      <Filter>STL</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
