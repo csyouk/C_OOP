@@ -1,13 +1,13 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 //double Add(double x, double y) { return x + y; }
 
-// ÇÔ¼ö ÅÛÇÃ¸´À» »ç¿ëÇÏ¿© ÅÛÇÃ¸´ ÇÔ¼ö°¡ ¸¸µé¾îÁ³´Ù.
-// ÇÔ¼öÀÇ »ý¼ºÀº ÄÄÆÄÀÏ·¯¿¡°Ô ÀÖ´Ù.
-// templateÀº ÄÄÆÄÀÏ·¯¿¡°Ô ÇÔ¼ö¸¦ Á¤ÀÇÇÒ °ÍÀ» ¾Ë¸°´Ù.
-// T´Â ÀÚ·áÇüÀ» °áÁ¤ÁþÁö ¾Ê°Ú´Ù.
-// ÀÚ·áÇüÀÌ °áÁ¤µÇ´Â ½ÃÁ¡Àº ÀÎÀÚ°¡ Àü´ÞµÉ ¶§ÀÌ´Ù.
+// í•¨ìˆ˜ í…œí”Œë¦¿ì„ ì‚¬ìš©í•˜ì—¬ í…œí”Œë¦¿ í•¨ìˆ˜ê°€ ë§Œë“¤ì–´ì¡Œë‹¤.
+// í•¨ìˆ˜ì˜ ìƒì„±ì€ ì»´íŒŒì¼ëŸ¬ì—ê²Œ ìžˆë‹¤.
+// templateì€ ì»´íŒŒì¼ëŸ¬ì—ê²Œ í•¨ìˆ˜ë¥¼ ì •ì˜í•  ê²ƒì„ ì•Œë¦°ë‹¤.
+// TëŠ” ìžë£Œí˜•ì„ ê²°ì •ì§“ì§€ ì•Šê² ë‹¤.
+// ìžë£Œí˜•ì´ ê²°ì •ë˜ëŠ” ì‹œì ì€ ì¸ìžê°€ ì „ë‹¬ë  ë•Œì´ë‹¤.
 template<typename T>
 T Add(T x, T y){
 	cout << "T Add(T x, T y)" << endl;
@@ -27,23 +27,23 @@ void ShowData(T1 arg1, T2 arg2) { cout << arg1 << "," << arg2 << endl; }
 
 int main(void){
 
-	// ¹¬½ÃÀûÀ¸·Î µ¥ÀÌÅÍÀÇ Å¸ÀÔÀ» È®ÀÎÈÄ ÅÛÇÃ¸´ ÇÔ¼ö¸¦ »ý¼ºÇÑ´Ù.
+	// ë¬µì‹œì ìœ¼ë¡œ ë°ì´í„°ì˜ íƒ€ìž…ì„ í™•ì¸í›„ í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ ìƒì„±í•œë‹¤.
 	cout << Add(10, 20) << endl;
 	cout << Add(10.1, 20.2) << endl;
 	ShowData(10, 'A');
 	ShowData(2.3, 100);
 	ShowData("multi", "campus");
 
-	// ¸í½ÃÀûÀ¸·Î µ¥ÀÌÅÍÀÇ Å¸ÀÔÀ» È®ÀÎÈÄ ÅÛÇÃ¸´ ÇÔ¼ö¸¦ »ý¼º.
+	// ëª…ì‹œì ìœ¼ë¡œ ë°ì´í„°ì˜ íƒ€ìž…ì„ í™•ì¸í›„ í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ ìƒì„±.
 	cout << Add<int>(10, 20) << endl;
 	cout << Add<double>(10.1, 20.2) << endl;
 	ShowData<int,char>(10, 'A');
 	ShowData<double,int>(2.3, 100);
-	ShowData<char *, char *>("3.8", " µ¥ÀÌÅÍ");
+	ShowData<char *, char *>("3.8", " ë°ì´í„°");
 
-	// ÇÏÁö¸¸, ¹¬½ÃÀûÀ¸·Î ÇÔ¼ö¸¦ È£Ãâ½Ã, ÀÏ¹ÝÇÔ¼ö¿¡ ´ëÇÑ ¿ì¼±¼øÀ§°¡ ´õ ³ô´Ù.
+	// í•˜ì§€ë§Œ, ë¬µì‹œì ìœ¼ë¡œ í•¨ìˆ˜ë¥¼ í˜¸ì¶œì‹œ, ì¼ë°˜í•¨ìˆ˜ì— ëŒ€í•œ ìš°ì„ ìˆœìœ„ê°€ ë” ë†’ë‹¤.
 	cout << Add(10, 20) << endl;
-	// ÇÏÁö¸¸, ¸í½ÃÀûÀ¸·Î ÅÛÇÃ¸´ ÇÔ¼ö¸¦ È£Ãâ½Ã¿¡´Â ÅÛÇÃ¸´ ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù.
+	// í•˜ì§€ë§Œ, ëª…ì‹œì ìœ¼ë¡œ í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ í˜¸ì¶œì‹œì—ëŠ” í…œí”Œë¦¿ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œë‹¤.
 	cout << Add<int>(10, 20) << endl;
 	return 0;
 }

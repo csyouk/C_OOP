@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 template<typename T>
 int SIZEOF(T x){ return sizeof(x); }
 
-// ÇÔ¼ö ÅÛÇÃ¸´ Æ¯¼öÈ­
+// í•¨ìˆ˜ í…œí”Œë¦¿ íŠ¹ìˆ˜í™”
 template<>
 int SIZEOF<char*>(char * x){ return strlen(x); }
 
