@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <algorithm> // sort
 #include <vector>   
 #include <functional>
@@ -14,23 +14,23 @@ int main(void){
 		cout << *it << ", ";
 	cout << endl;
 
-	// ÇØ´ç Á¤·ÄÀº ¿À¸§Â÷¼ø¸¸ Áö¿øÇÑ´Ù.
+	// í•´ë‹¹ ì •ë ¬ì€ ì˜¤ë¦„ì°¨ìˆœë§Œ ì§€ì›í•œë‹¤.
 	sort(vec1.begin(), vec1.end()); 
 	for (it = vec1.begin(); it != vec1.end(); it++)
 		cout << *it << ", ";
 	cout << endl;
 
-	// ³»¸²Â÷¼øÀ¸·Î Á¤·ÄÇÏ·Á¸é
+	// ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•˜ë ¤ë©´
 	sort(vec1.begin(), vec1.end(), greater<char>());
 	for (it = vec1.begin(); it != vec1.end(); it++)
 		cout << *it << ", ";
 	cout << endl;
 
-	// °íÁ¤¹è¿­
+	// ê³ ì •ë°°ì—´
 	char arr[5] = { 'D', 'S', 'Z', 'A', 'G' };
 	//arr[5] = 'A';
 	
-	// °íÁ¤¹è¿­¶ÇÇÑ sortingÀÌ °¡´ÉÇÏ´Ù.
+	// ê³ ì •ë°°ì—´ë˜í•œ sortingì´ ê°€ëŠ¥í•˜ë‹¤.
 	sort(arr, arr + 5);
 	for (int i = 0; i < 5; i++)
 		cout << arr[i] << ", ";

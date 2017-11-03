@@ -1,5 +1,5 @@
-#include <iostream>
-#include <list> // linked list¸¦ Æ÷ÇÔÇÏ´Â ¶óÀÌºê·¯¸®.
+ï»¿#include <iostream>
+#include <list> // linked listë¥¼ í¬í•¨í•˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬.
 using namespace std;
 int main(void){
 
@@ -10,20 +10,20 @@ int main(void){
 	
 	cout << "==================" << endl;
 
-	list<int>::iterator it; // ¹İº¹ÀÚ
+	list<int>::iterator it; // ë°˜ë³µì
 	for (it = intArr.begin(); it != intArr.end(); it++)
 		cout << *it << ", ";
 	cout << endl;
 
 	cout << "==================" << endl;
-	cout << "15 ¾ø¾Ö±â" << endl;
+	cout << "15 ì—†ì• ê¸°" << endl;
 	intArr.remove(15);
 	for (it = intArr.begin(); it != intArr.end(); it++)
 		cout << *it << ", ";
 	cout << endl;
 
 	cout << "==================" << endl;
-	cout << "¾Õ¿¡ -100, µÚ¿¡ 100 ³Ö±â" << endl;
+	cout << "ì•ì— -100, ë’¤ì— 100 ë„£ê¸°" << endl;
 	intArr.push_back(100);
 	intArr.push_front(-100);
 	for (it = intArr.begin(); it != intArr.end(); it++)
@@ -31,11 +31,11 @@ int main(void){
 	cout << endl;
 
 	cout << "==================" << endl;
-	cout << "3030 ¾ø¾Ö±â" << endl;
+	cout << "3030 ì—†ì• ê¸°" << endl;
 	intArr.remove(3030);
 
 	cout << "==================" << endl;
-	cout << "2¹øÂ° ³ëµå·Î ÀÌµ¿ÈÄ »èÁ¦" << endl;
+	cout << "2ë²ˆì§¸ ë…¸ë“œë¡œ ì´ë™í›„ ì‚­ì œ" << endl;
 
 	it = intArr.begin();
 	cout << *it << endl;
@@ -47,7 +47,7 @@ int main(void){
 	cout << endl;
 
 	cout << "==================" << endl;
-	cout << "3¹øÂ° ³ëµå·Î ÀÌµ¿ÈÄ 300 »ğÀÔ" << endl;
+	cout << "3ë²ˆì§¸ ë…¸ë“œë¡œ ì´ë™í›„ 300 ì‚½ì…" << endl;
 
 	it = intArr.begin();
 	it++; it++;
@@ -57,12 +57,12 @@ int main(void){
 	cout << endl;
 
 	cout << "==================" << endl;
-	cout << "doubleÇü linked list »ı¼º." << endl;
+	cout << "doubleí˜• linked list ìƒì„±." << endl;
 	list<double> dArr;
 	dArr.push_back(1.1); dArr.push_back(2.2);
 	dArr.push_back(3.3); dArr.push_back(4.4);
 
-	// iterator´Â list<T>¸¦ °¡¸®Å°´Â Æ÷ÀÎÅÍÀÌ´Ù.
+	// iteratorëŠ” list<T>ë¥¼ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°ì´ë‹¤.
 	list<double>::iterator it2;
 	for (it2 = dArr.begin(); it2 != dArr.end(); it2++)
 		cout << *it2 << ", ";
