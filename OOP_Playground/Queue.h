@@ -1,11 +1,11 @@
 class Queue
 {
 public:
-	MyClass()
+	Queue()
 	{
 	}
 
-	~MyClass()
+	~Queue()
 	{
 	}
 
