@@ -35,7 +35,10 @@
     <ClCompile Include="STL_List.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="STL_Vector.cpp" />
+    <ClCompile Include="STL_Map.cpp" />
+    <ClCompile Include="STL_Vector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C809AA4E-1D12-40C7-8DCC-449ACC0FDF94}</ProjectGuid>
