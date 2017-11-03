@@ -43,7 +43,7 @@ T Stack<T>::Pop()
 	if(topIdx<0)
 	{
 		cout<<"stack empty !!!"<<endl;
-		return 32; // 32 means ' ' , space
+		return (T)32; // 32 means ' ' in char, space
 	}
 	return stackPtr[topIdx--];
 }

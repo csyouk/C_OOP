@@ -16,6 +16,9 @@
     <Filter Include="Template">
       <UniqueIdentifier>{ceb99569-db9f-48d2-98ce-1d7b30532d14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="STL">
+      <UniqueIdentifier>{f2861ce1-8746-45e0-9a70-8451e25e9c5c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Function_Template_2.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="StackTemplate1.cpp">
       <Filter>Template</Filter>
+    </ClCompile>
+    <ClCompile Include="STL_List.cpp">
+      <Filter>STL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

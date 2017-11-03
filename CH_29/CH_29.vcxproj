@@ -29,7 +29,10 @@
     <ClCompile Include="Function_Template_1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="StackTemplate1.cpp" />
+    <ClCompile Include="StackTemplate1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="STL_List.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C809AA4E-1D12-40C7-8DCC-449ACC0FDF94}</ProjectGuid>
