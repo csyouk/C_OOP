@@ -17,6 +17,7 @@
 - [friend](./friend.md)
 - [iosteam](./iostream.md)
 - [Default_Assignment Operator](Default_Assignment_Operator.md)
+- [Template](./Template.md)
 - [VLD](./VLD.md)
 - [Rule Of Three](./Rule-Of-Three.md)
 

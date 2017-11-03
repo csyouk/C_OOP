@@ -61,8 +61,9 @@ void Person::ShowData()
 
 void Person::operator=(const Person & p)
 {
-	if (this->name){ delete this->name;}
-	if (this->phone){ delete this->phone;}
+	// 이 구문이 없다면, memory leak이 발생한다.
+	if (this->name){ delete[] this->name;}
+	if (this->phone){ delete[] this->phone;}
 	this->name = new char[strlen(p.name) + 1];
 	this->phone = new char[strlen(p.phone) + 1];
 	strcpy(name, p.name);
@@ -78,7 +79,6 @@ int main()
 	Person p2(p1);
 	p2.ShowData();
 
-
 	cout << "==========" << endl;
 	Person p3;
 	// 디폴트 대입연산자가 작동함.
@@ -86,5 +86,10 @@ int main()
 	// p3.operator=(p1);
 	p3 = p1;
 	p3.ShowData();
+	cout << "==========" << endl;
+	
+	Person p4("lee", "010-2532-3571", 27);
+	p1 = p4;
+	p1.ShowData();
 	return 0;
 }
