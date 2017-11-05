@@ -110,7 +110,7 @@ void DefaultArg(int a,   int b,   int c=3);
 
 - **디폴트 인자와 오버로딩이 충돌하는 경우, C++은 컴파일을 허락하지 않는다.**
 - 아래와 같은 경우, Ambiguous함수는 1을 호출하는가 2를 호출하는가?
-- 애매하다. 무엇을 호출할지 모른다. 이런 경우, C++은 컴파일을 호출하지 않는다.
+- 애매하다. 무엇을 호출할지 모른다. 이런 경우, C++은 컴파일을 허락하지 않는다.
 
 ```cpp
 void Ambiguous(int a, int b = 100); // 1
@@ -127,7 +127,7 @@ void WhichOne(char c);
 void WhichOne(int c);
 ```
 
-- C++은 다음 함수를 아래와 같은 방식으로 변환한다.
+- C++은 다음 함수를 아래와 같은 방식으로 변환한다. 
 
 ```cpp
 ?WhichOne@@YAXH@Z

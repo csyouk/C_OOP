@@ -282,7 +282,7 @@ public:
 
 ### Upcasting
 - Upcasting이 왜 필요하게 되는것일까?
-- [원본 코드2](./CH_22/Is_A_Pointer1.cpp)
+- [원본 코드1](./CH_22/Is_A_Pointer1.cpp)
 - [원본 코드2](./CH_22/Is_A_Pointer2.cpp)
 
 ```cpp

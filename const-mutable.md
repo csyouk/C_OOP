@@ -126,9 +126,9 @@ public:
 
 	void ShowData() const
 	{
-		ShowIntro(); //불가하다 상수화된 메소드는 상수화된 메소드밖에 부를 수 없다.
+		ShowIntro(); //상수화된 메소드는 상수화된 메소드만 부를 수 있다.
 
-		age = 30;
+		age = 30; // 멤버 변수 age가 mutable이기 때문에, 변형이 가능하다.
 		cout << "| " << id << " | " << age << " | " << name << " | " << major << " | " << endl;
 		//age = 30; // 상수화된 메서드에서는 멤버의 수정이 불가하다.
 	}
